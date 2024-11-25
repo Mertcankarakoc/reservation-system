@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otomasyon.reservationsystem.controller.LogInController">
+    <children>
+        <TextField fx:id="emailField" layoutX="210.0" layoutY="124.0" promptText="E Posta" />
+        <PasswordField fx:id="passwordField" layoutX="210.0" layoutY="160.0" promptText="Parola" />
+        <Button layoutX="257.0" layoutY="200.0" onAction="#handleLoginButtonAction" text="Giriş Yap" />
+        <Button layoutX="257.0" layoutY="240.0" onAction="#handleBackButtonAction" text="Geri Dön" />
+    </children>
+</AnchorPane>
