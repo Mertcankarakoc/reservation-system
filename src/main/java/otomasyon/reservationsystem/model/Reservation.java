@@ -2,6 +2,7 @@ package otomasyon.reservationsystem.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import otomasyon.reservationsystem.model.Enum.TableType;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -19,17 +20,18 @@ public class Reservation {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private TableType tableType;
+
     private int numberOfPeople;
 
-    @Column(nullable = false)
     private LocalDate reservationDate;
 
-    @Column(nullable = false)
     private LocalTime startTime;
 
-    @Column(nullable = false)
     private LocalTime endTime;
+
+    private int tableNumber;
 
     private String specialRequests;
 }

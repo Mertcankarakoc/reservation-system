@@ -4,8 +4,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-import otomasyon.reservationsystem.model.MenuItem;
-import otomasyon.reservationsystem.model.MenuOrder;
+import otomasyon.reservationsystem.model.Menu;
+import otomasyon.reservationsystem.model.Order;
 import otomasyon.reservationsystem.model.Reservation;
 import otomasyon.reservationsystem.model.User;
 
@@ -31,8 +31,8 @@ public class HibernateUtil {
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
                 configuration.addAnnotatedClass(Reservation.class);
-                configuration.addAnnotatedClass(MenuItem.class);
-                configuration.addAnnotatedClass(MenuOrder.class);
+                configuration.addAnnotatedClass(Menu.class);
+                configuration.addAnnotatedClass(Order.class);
 
                 ServiceRegistry serviceRegistry = new org.hibernate.boot.registry.StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();

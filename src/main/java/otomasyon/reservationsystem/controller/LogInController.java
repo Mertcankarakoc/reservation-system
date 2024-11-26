@@ -62,7 +62,7 @@ public class LogInController {
 
     private void openReservationView(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/otomasyon/reservationsystem/reservation-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/otomasyon/reservationsystem/homePage-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("Reservation");

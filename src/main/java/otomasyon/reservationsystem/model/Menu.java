@@ -6,11 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "menu_items")
+@Table(name = "menu")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MenuItem {
+public class Menu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
